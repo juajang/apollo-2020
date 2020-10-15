@@ -11,7 +11,7 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "set PORT=9090 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -33,7 +33,6 @@
   },
   "devDependencies": {
     "@apollo/client": "^3.2.4",
-    "@apollo/react-hooks": "^4.0.0",
     "graphql": "^15.3.0",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.0"

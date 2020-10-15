@@ -5,11 +5,11 @@ import client from "./apollo";
 import { ApolloProvider } from "@apollo/client";
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </ApolloProvider>,
+  <React.StrictMode>
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
