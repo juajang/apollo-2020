@@ -81,7 +81,7 @@ const Detail = () => {
   const { loading, data } = useQuery(GET_MOVIE, {
     variables: { id: parseInt(id) },
   });
-  console.log(data);
+
   return (
     <Container>
       <MovieWrapper>
