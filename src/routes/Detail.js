@@ -12,6 +12,10 @@ const GET_MOVIE = gql`
           medium_cover_image
           description_intro
       }
+      suggestions(id: $id) {
+          id
+          medium_cover_image
+      }
   }
 `;
 
@@ -64,14 +68,10 @@ const Detail = () => {
     <Container>
       <Column>
         <Title> {loading ? "Loading..." : data.movie.title} </Title>
-        {!loading && data.movie &&
-          <>
-            <Subtitle>{data.movie.language} · {data.movie.rating} </Subtitle>
-            <Description>{data.movie.description_intro}</Description>
-          </>
-        }
+        <Subtitle>{data?.movie?.language} {data?.movie&&"·"} {data?.movie?.rating} </Subtitle>
+        <Description>{data?.movie?.description_intro}</Description>
       </Column>
-      <Poster bg={data && data.movie ? data.movie.medium_cover_image : ""}></Poster>
+      <Poster bg={data?.movie?.medium_cover_image}/>
     </Container>
   );
 };
